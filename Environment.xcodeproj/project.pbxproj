@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C81EF93329CF075B006E7DD5 /* RoundedListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EF93229CF075B006E7DD5 /* RoundedListSection.swift */; };
+		C81EF93329CF075B006E7DD5 /* RoundedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EF93229CF075B006E7DD5 /* RoundedSection.swift */; };
 		C81EF93529CF11D1006E7DD5 /* DaemonEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EF93429CF11D1006E7DD5 /* DaemonEditor.swift */; };
 		C81EF93729CF1539006E7DD5 /* Image+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EF93629CF1539006E7DD5 /* Image+Data.swift */; };
-		C89689BC29BF576700DF5BD6 /* View+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89689BB29BF576700DF5BD6 /* View+Utils.swift */; };
-		C89689BE29BF57AF00DF5BD6 /* Color+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89689BD29BF57AF00DF5BD6 /* Color+Utils.swift */; };
+		C81EF93929CF170A006E7DD5 /* View+hidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EF93829CF170A006E7DD5 /* View+hidden.swift */; };
+		C81EF93B29CF1713006E7DD5 /* View+border.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EF93A29CF1713006E7DD5 /* View+border.swift */; };
+		C81EF93D29CF76DD006E7DD5 /* ExecutionPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EF93C29CF76DD006E7DD5 /* ExecutionPicker.swift */; };
+		C81EF93F29CF7875006E7DD5 /* TextFieldSettingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EF93E29CF7875006E7DD5 /* TextFieldSettingRow.swift */; };
+		C81EF94129CF78AD006E7DD5 /* ToggleSettingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EF94029CF78AD006E7DD5 /* ToggleSettingRow.swift */; };
+		C81EF94329CF7932006E7DD5 /* tech_task.txt in Resources */ = {isa = PBXBuildFile; fileRef = C81EF94229CF7932006E7DD5 /* tech_task.txt */; };
+		C81EF94529CF799C006E7DD5 /* DaemonExecution.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EF94429CF799C006E7DD5 /* DaemonExecution.swift */; };
+		C89689BE29BF57AF00DF5BD6 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89689BD29BF57AF00DF5BD6 /* Color+Hex.swift */; };
 		C8E4066829BC7FEF00F5E0B5 /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E4066729BC7FEF00F5E0B5 /* DropView.swift */; };
 		C8E4066C29BC86E900F5E0B5 /* DaemonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E4066B29BC86E900F5E0B5 /* DaemonView.swift */; };
 		C8E4066E29BC9B9600F5E0B5 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E4066D29BC9B9600F5E0B5 /* Avatar.swift */; };
@@ -26,11 +32,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C81EF93229CF075B006E7DD5 /* RoundedListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedListSection.swift; sourceTree = "<group>"; };
+		C81EF93229CF075B006E7DD5 /* RoundedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedSection.swift; sourceTree = "<group>"; };
 		C81EF93429CF11D1006E7DD5 /* DaemonEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaemonEditor.swift; sourceTree = "<group>"; };
 		C81EF93629CF1539006E7DD5 /* Image+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Data.swift"; sourceTree = "<group>"; };
-		C89689BB29BF576700DF5BD6 /* View+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Utils.swift"; sourceTree = "<group>"; };
-		C89689BD29BF57AF00DF5BD6 /* Color+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Utils.swift"; sourceTree = "<group>"; };
+		C81EF93829CF170A006E7DD5 /* View+hidden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+hidden.swift"; sourceTree = "<group>"; };
+		C81EF93A29CF1713006E7DD5 /* View+border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+border.swift"; sourceTree = "<group>"; };
+		C81EF93C29CF76DD006E7DD5 /* ExecutionPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionPicker.swift; sourceTree = "<group>"; };
+		C81EF93E29CF7875006E7DD5 /* TextFieldSettingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldSettingRow.swift; sourceTree = "<group>"; };
+		C81EF94029CF78AD006E7DD5 /* ToggleSettingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleSettingRow.swift; sourceTree = "<group>"; };
+		C81EF94229CF7932006E7DD5 /* tech_task.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = tech_task.txt; sourceTree = "<group>"; };
+		C81EF94429CF799C006E7DD5 /* DaemonExecution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaemonExecution.swift; sourceTree = "<group>"; };
+		C89689BD29BF57AF00DF5BD6 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		C8E4066729BC7FEF00F5E0B5 /* DropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropView.swift; sourceTree = "<group>"; };
 		C8E4066B29BC86E900F5E0B5 /* DaemonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaemonView.swift; sourceTree = "<group>"; };
 		C8E4066D29BC9B9600F5E0B5 /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
@@ -89,7 +101,10 @@
 			children = (
 				C8E4066729BC7FEF00F5E0B5 /* DropView.swift */,
 				C8E4066D29BC9B9600F5E0B5 /* Avatar.swift */,
-				C81EF93229CF075B006E7DD5 /* RoundedListSection.swift */,
+				C81EF93229CF075B006E7DD5 /* RoundedSection.swift */,
+				C81EF93E29CF7875006E7DD5 /* TextFieldSettingRow.swift */,
+				C81EF94029CF78AD006E7DD5 /* ToggleSettingRow.swift */,
+				C81EF93C29CF76DD006E7DD5 /* ExecutionPicker.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -100,6 +115,7 @@
 				C8E4066B29BC86E900F5E0B5 /* DaemonView.swift */,
 				C81EF93429CF11D1006E7DD5 /* DaemonEditor.swift */,
 				CE7DC78A29B8EDB600847FE7 /* Daemon.swift */,
+				C81EF94429CF799C006E7DD5 /* DaemonExecution.swift */,
 			);
 			path = Daemon;
 			sourceTree = "<group>";
@@ -107,9 +123,10 @@
 		C89689C429BF57F400DF5BD6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				C89689BB29BF576700DF5BD6 /* View+Utils.swift */,
-				C89689BD29BF57AF00DF5BD6 /* Color+Utils.swift */,
+				C89689BD29BF57AF00DF5BD6 /* Color+Hex.swift */,
 				C81EF93629CF1539006E7DD5 /* Image+Data.swift */,
+				C81EF93829CF170A006E7DD5 /* View+hidden.swift */,
+				C81EF93A29CF1713006E7DD5 /* View+border.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -134,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				CE7DC77929B8D80900847FE7 /* EnvironmentApp.swift */,
+				C81EF94229CF7932006E7DD5 /* tech_task.txt */,
 				C89689BF29BF57C800DF5BD6 /* UI */,
 				C89689C429BF57F400DF5BD6 /* Utils */,
 				CE7DC78C29B8EEF600847FE7 /* DaemonStorage.swift */,
@@ -213,6 +231,7 @@
 			files = (
 				CE7DC78129B8D80A00847FE7 /* Preview Assets.xcassets in Resources */,
 				CE7DC77E29B8D80A00847FE7 /* Assets.xcassets in Resources */,
+				C81EF94329CF7932006E7DD5 /* tech_task.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,19 +243,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE7DC78929B8DBD300847FE7 /* MonitorView.swift in Sources */,
-				C81EF93329CF075B006E7DD5 /* RoundedListSection.swift in Sources */,
+				C81EF93329CF075B006E7DD5 /* RoundedSection.swift in Sources */,
+				C81EF93D29CF76DD006E7DD5 /* ExecutionPicker.swift in Sources */,
 				C8E4066829BC7FEF00F5E0B5 /* DropView.swift in Sources */,
+				C81EF93929CF170A006E7DD5 /* View+hidden.swift in Sources */,
 				CE7DC78D29B8EEF600847FE7 /* DaemonStorage.swift in Sources */,
 				C81EF93529CF11D1006E7DD5 /* DaemonEditor.swift in Sources */,
+				C81EF93F29CF7875006E7DD5 /* TextFieldSettingRow.swift in Sources */,
 				C81EF93729CF1539006E7DD5 /* Image+Data.swift in Sources */,
 				CE7DC79029B8EF0A00847FE7 /* Environment.xcdatamodeld in Sources */,
 				CE7DC77A29B8D80900847FE7 /* EnvironmentApp.swift in Sources */,
 				C8E4066C29BC86E900F5E0B5 /* DaemonView.swift in Sources */,
-				C89689BC29BF576700DF5BD6 /* View+Utils.swift in Sources */,
-				C89689BE29BF57AF00DF5BD6 /* Color+Utils.swift in Sources */,
+				C81EF93B29CF1713006E7DD5 /* View+border.swift in Sources */,
+				C81EF94529CF799C006E7DD5 /* DaemonExecution.swift in Sources */,
+				C89689BE29BF57AF00DF5BD6 /* Color+Hex.swift in Sources */,
 				CE7DC79229B8EFB300847FE7 /* Monitor.swift in Sources */,
 				C8E4066E29BC9B9600F5E0B5 /* Avatar.swift in Sources */,
 				CE7DC78B29B8EDB600847FE7 /* Daemon.swift in Sources */,
+				C81EF94129CF78AD006E7DD5 /* ToggleSettingRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

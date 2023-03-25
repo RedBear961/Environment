@@ -1,5 +1,5 @@
 //
-//  RoundedListSection.swift
+//  RoundedSection.swift
 //  Environment
 //
 //  Created by Georgiy Cheremnykh on 25.03.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct RoundedListSection<Content: View>: View {
+public struct RoundedSection<Content: View>: View {
 
 	public var content: () -> Content
 

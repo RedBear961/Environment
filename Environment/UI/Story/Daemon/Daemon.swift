@@ -7,12 +7,6 @@
 
 import SwiftUI
 
-@objc public enum ExecutionType: Int {
-
-	case executableFile
-	case shellCommand
-}
-
 public enum DaemonStatus: Int {
 
 	case active
@@ -21,7 +15,7 @@ public enum DaemonStatus: Int {
 	case disabling
 	case disable
 
-	var localized: String {
+	public var localized: String {
 		switch self {
 		case .active:       return "Активно"
 		case .loading:      return "Запуск"
@@ -31,7 +25,7 @@ public enum DaemonStatus: Int {
 		}
 	}
 
-	var color: Color {
+	public var color: Color {
 		switch self {
 		case .active:
 			return .green
@@ -43,7 +37,7 @@ public enum DaemonStatus: Int {
 	}
 }
 
-@objc(Service)
+@objc(Daemon)
 public final class Daemon: NSManagedObject {
 
     @NSManaged public var name: String
@@ -51,19 +45,8 @@ public final class Daemon: NSManagedObject {
 	@NSManaged public var detail: String
 	@NSManaged public var port: Int
 	@NSManaged public var process: String
-	@NSManaged public var launch: ExecutionDetails
-	@NSManaged public var stop: ExecutionDetails
+	@NSManaged public var launch: DaemonLaunch
+	@NSManaged public var stop: DaemonStop
     
     public var status: DaemonStatus = .disable
-}
-
-@objc(ExecutionDetails)
-public final class ExecutionDetails: NSManagedObject {
-
-	@NSManaged public var type: ExecutionType
-	@NSManaged public var path: String
-	@NSManaged public var arguments: String
-	@NSManaged public var command: String
-	@NSManaged public var executeOnStart: Bool
-	@NSManaged public var runAsAdmin: Bool
 }

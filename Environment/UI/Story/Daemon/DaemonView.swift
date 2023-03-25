@@ -8,9 +8,25 @@
 import SwiftUI
 import AppKit
 
+enum DaemonSelection {
+
+	case main
+	case launch
+
+	var localized: String {
+		switch self {
+		case .main:
+			return "Основное"
+		case .launch:
+			return "Запуск"
+		}
+	}
+}
+
 public struct DaemonView: View {
 
 	@ObservedObject var editor: DaemonEditor
+	@State var selection: DaemonSelection = .main
 
 	public var body: some View {
 		VStack(spacing: 0) {
@@ -35,74 +51,26 @@ public struct DaemonView: View {
 
 			Divider()
 
-			ScrollView {
-				VStack(spacing: 16) {
-					mainSection
-
-					RoundedListSection {
-						VStack(spacing: 12) {
-							HStack {
-								Text("Запуск")
-
-								Spacer()
-
-								Picker("", selection: $editor.daemon.launch) {
-									Text("Исполняемый файл")
-										.tag(ExecutionType.executableFile)
-
-									Text("Shell-команда")
-										.tag(ExecutionType.shellCommand)
-								}
-								.pickerStyle(.menu)
-								.frame(maxWidth: 200)
-								.labelsHidden()
-								.clipped()
-								.scaledToFit()
-							}
-
-							Divider()
-
-							switch editor.daemon.launch.type {
-							case .executableFile:
-								SettingRow(
-									title: "Путь",
-									placeholder: "Обязательно",
-									text: $editor.daemon.launch.path
-								)
-
-								Divider()
-
-								SettingRow(
-									title: "Аргументы",
-									placeholder: "Необязательно",
-									text: $editor.daemon.launch.arguments
-								)
-							case .shellCommand:
-								SettingRow(
-									title: "Команда",
-									placeholder: "Обязательно",
-									text: $editor.daemon.launch.command
-								)
-							}
-
-							Divider()
-
-							ToggleSettingsRow(
-								title: "Запускать при входе в систему",
-								isOn: $editor.daemon.launch.executeOnStart
-							)
-
-							Divider()
-
-							ToggleSettingsRow(
-								title: "Выполнять от имени администратора",
-								isOn: $editor.daemon.launch.runAsAdmin
-							)
+			NavigationSplitView {
+				List(selection: $selection) {
+					link(to: .main)
+					link(to: .launch)
+				}
+				.padding(.vertical, 8)
+			} detail: {
+				ScrollView {
+					VStack(spacing: 16) {
+						switch selection {
+						case .main:
+							mainSection
+						case .launch:
+							launchSection(launch: $editor.daemon.launch)
 						}
 					}
+					.padding()
 				}
-				.padding()
 			}
+			.navigationSplitViewStyle(.balanced)
 		}
 		.toolbar {
 			Text("Новый сервис")
@@ -110,9 +78,71 @@ public struct DaemonView: View {
 		}
     }
 
+	var siderbar: some View {
+		List {
+			link(to: .main)
+			link(to: .launch)
+		}
+		.padding(.vertical, 8)
+	}
+
+	func link(to selection: DaemonSelection) -> some View {
+		NavigationLink(value: selection) {
+			Text(selection.localized)
+		}
+	}
+
+	@ViewBuilder func launchSection(launch: Binding<DaemonLaunch>) -> some View {
+		RoundedSection {
+			ExecutionPicker(
+				title: "Запуск",
+				executionType: launch.type
+			)
+
+			Divider()
+
+			switch editor.daemon.launch.type {
+			case .executableFile:
+				TextFieldSettingRow(
+					title: "Путь",
+					placeholder: "Обязательно",
+					text: launch.path
+				)
+
+				Divider()
+
+				TextFieldSettingRow(
+					title: "Аргументы",
+					placeholder: "Необязательно",
+					text: launch.arguments
+				)
+			case .shellCommand:
+				TextFieldSettingRow(
+					title: "Команда",
+					placeholder: "Обязательно",
+					text: launch.command
+				)
+			}
+		}
+
+		RoundedSection {
+			ToggleSettingRow(
+				title: "Запускать при входе в систему",
+				isOn: $editor.daemon.launch.executeOnStart
+			)
+
+			Divider()
+
+			ToggleSettingRow(
+				title: "Выполнять от имени администратора",
+				isOn: $editor.daemon.launch.runAsAdmin
+			)
+		}
+	}
+
 	@ViewBuilder var mainSection: some View {
-		RoundedListSection {
-			SettingRow(
+		RoundedSection {
+			TextFieldSettingRow(
 				title: "Отображаемое имя",
 				placeholder: "Обязательно",
 				text: $editor.daemon.name
@@ -120,52 +150,12 @@ public struct DaemonView: View {
 
 			Divider()
 
-			SettingRow(
+			TextFieldSettingRow(
 				title: "Описание",
 				placeholder: "Необязательно",
 				isHaveSpacer: false,
 				text: $editor.daemon.detail
 			)
-		}
-	}
-}
-
-struct SettingRow: View {
-
-	public var title: String
-	public var placeholder: String
-	public var isHaveSpacer: Bool = true
-
-	@Binding public var text: String
-
-	var body: some View {
-		HStack {
-			Text(title)
-
-			if isHaveSpacer {
-				Spacer()
-			}
-
-			TextField(placeholder, text: $text)
-				.textFieldStyle(.plain)
-				.multilineTextAlignment(.trailing)
-		}
-	}
-}
-
-struct ToggleSettingsRow: View {
-
-	public var title: String
-	@Binding public var isOn: Bool
-
-	var body: some View {
-		HStack {
-			Text(title)
-
-			Spacer()
-
-			Toggle("", isOn: $isOn)
-				.toggleStyle(.switch)
 		}
 	}
 }
@@ -177,37 +167,3 @@ struct DaemonView_Previews: PreviewProvider {
 			.frame(width: 650, height: 500)
     }
 }
-
-// Иконка
-// Имя
-// Описание
-
-// 2.1 Запуск по команде
-// Команда
-
-// 2.2 Запуск по исполняемому файлу
-// Путь
-// Аргументы
-
-// 2
-// Запускать от имени администратора
-// Запускать при входе в систему
-// Запускать после старта N/через X времени после старта N
-
-// 3.1 Остановка по команде
-// 3.2 Остановка по исполняемому файлу
-
-// 3
-// Останавливать от имени администратора
-// Оповещать при незапланированной остановке
-// Останавливать, если был остановлен N
-
-// Перезапуск
-// Активен
-// По команде/исполняемому файл/использовать данные запуска
-// Перезапуск каждые N часов/дней/...
-// Перезапуск каждый(-ую) X в Y часов
-
-// 5
-// Порт
-// Имя процесса/группа процессов

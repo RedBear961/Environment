@@ -10,10 +10,19 @@ import SwiftUI
 public final class Monitor: ObservableObject {
     
     @Published public var services: [Daemon]
+
+	private var storage: DaemonStorage
     
-    public init() {
-        services = []
+	public init(storage: DaemonStorage = .shared) {
+		self.storage = storage
+		self.services = []
     }
+
+	public func newDaemon() -> some View {
+		let daemon = storage.new()
+		let editor = DaemonEditor(daemon: daemon)
+		return DaemonView(editor: editor)
+	}
     
     public func start(_ service: Daemon) {
         let index = services.firstIndex { $0.name == service.name }

@@ -14,98 +14,71 @@ public struct MonitorView: View {
     public var body: some View {
         NavigationStack {
             List {
-                ForEach(monitor.services, id: \.name) { service in
+                ForEach(monitor.services, id: \.name) { daemon in
                     HStack {
-                        StatusView(service: service)
-                        
-						if service.status.color == .yellow {
-                            ProgressView()
-                                .progressViewStyle(.linear)
-                                .offset(y: -9)
-                        }
+                        statusView(daemon)
                         
                         Spacer(minLength: 40)
                         
-                        ActionView(
-                            monitor: monitor,
-                            service: service
-                        )
+                        actionView(daemon)
                     }
                     .padding()
                 }
                 .listRowSeparator(.visible)
             }
             .toolbar {
-				Text("Мониторинг")
-					.font(.system(size: 15, weight: .semibold))
+				toolbar
+            }
+        }
+    }
 
-				NavigationLink(destination: { DaemonView(editor: DaemonEditor(daemon: Daemon())) }) {
-                    Image(systemName: "plus")
-                }
-            }
-        }
-    }
-}
+	@ViewBuilder func statusView(_ daemon: Daemon) -> some View {
+		HStack {
+			Image(data: daemon.image, default: "template_icon")
+				.resizable()
+				.frame(width: 48, height: 48)
 
-extension MonitorView {
-    
-    struct StatusView: View {
-        
-        public let service: Daemon
-        
-        var body: some View {
-            HStack {
-				Image(data: service.image, default: "template_icon")
-                    .resizable()
-                    .frame(width: 48, height: 48)
-                
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(service.name)
-                        .font(.title2)
-                    
-                    HStack {
-                        Circle()
-                            .frame(width: 8, height: 8)
-                            .foregroundColor(service.status.color)
-                        
-                        Text(service.status.localized)
-                    }
-                }
-            }
-        }
-    }
-    
-    struct ActionView: View {
-        
-        @ObservedObject public var monitor: Monitor
-        public let service: Daemon
-        
-        var body: some View {
-            ZStack {
-                VStack {
-                    switch service.status {
-                    case .active, .disabling, .reloading:
-                        Button(action: { monitor.restart(service) }) {
-                            Text("Перезапуск")
-                        }
-                        
-                        Button(action: { monitor.stop(service) }) {
-                            Text("Остановить")
-                        }
-                        .buttonStyle(.borderedProminent)
-                        .tint(.red)
-                    case .disable, .loading:
-                        Button(action: { monitor.start(service) }) {
-                            Text("Запустить")
-                        }
-                        .buttonStyle(.borderedProminent)
-                        .tint(.blue)
-                    }
-                }
-                .disabled(service.status.color == .yellow)
-            }
-        }
-    }
+			VStack(alignment: .leading, spacing: 4) {
+				Text(daemon.name)
+					.font(.title2)
+
+				HStack {
+					Circle()
+						.frame(width: 8, height: 8)
+						.foregroundColor(daemon.status.color)
+
+					Text(daemon.status.localized)
+				}
+			}
+		}
+	}
+
+	@ViewBuilder func actionView(_ daemon: Daemon) -> some View {
+		VStack {
+			switch daemon.status {
+			case .active, .disabling, .reloading:
+				Button("Перезапуск", action: { monitor.restart(daemon) })
+
+				Button("Остановить", action: { monitor.stop(daemon) })
+					.buttonStyle(.borderedProminent)
+					.tint(.red)
+			case .disable, .loading:
+				Button("Запустить", action: { monitor.start(daemon) })
+				.buttonStyle(.borderedProminent)
+				.tint(.blue)
+			}
+		}
+		.disabled(daemon.status.color == .yellow)
+	}
+
+	@ViewBuilder var toolbar: some View {
+		Text("Мониторинг")
+			.font(.system(size: 15, weight: .semibold))
+
+		NavigationLink(destination: monitor.newDaemon) {
+			Image(systemName: "plus")
+		}
+	}
 }
 
 struct MonitorView_Previews: PreviewProvider {
