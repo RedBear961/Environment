@@ -18,7 +18,7 @@ public struct MonitorView: View {
                     HStack {
                         StatusView(service: service)
                         
-                        if service.status.isInProgress {
+						if service.status.color == .yellow {
                             ProgressView()
                                 .progressViewStyle(.linear)
                                 .offset(y: -9)
@@ -36,7 +36,10 @@ public struct MonitorView: View {
                 .listRowSeparator(.visible)
             }
             .toolbar {
-                NavigationLink(destination: { AddServiceView() }) {
+				Text("Мониторинг")
+					.font(.system(size: 15, weight: .semibold))
+
+				NavigationLink(destination: { DaemonView(editor: DaemonEditor(daemon: Daemon())) }) {
                     Image(systemName: "plus")
                 }
             }
@@ -48,11 +51,11 @@ extension MonitorView {
     
     struct StatusView: View {
         
-        public let service: Service
+        public let service: Daemon
         
         var body: some View {
             HStack {
-                Image(service.image)
+				Image(data: service.image, default: "template_icon")
                     .resizable()
                     .frame(width: 48, height: 48)
                 
@@ -75,7 +78,7 @@ extension MonitorView {
     struct ActionView: View {
         
         @ObservedObject public var monitor: Monitor
-        public let service: Service
+        public let service: Daemon
         
         var body: some View {
             ZStack {
@@ -99,7 +102,7 @@ extension MonitorView {
                         .tint(.blue)
                     }
                 }
-                .disabled(service.status.isInProgress)
+                .disabled(service.status.color == .yellow)
             }
         }
     }

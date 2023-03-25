@@ -1,5 +1,5 @@
 //
-//  ServiceStorage.swift
+//  DaemonStorage.swift
 //  Environment
 //
 //  Created by  User on 08.03.2023.
@@ -7,7 +7,7 @@
 
 import CoreData
 
-public final class ServiceStorage {
+public final class DaemonStorage {
     
     public lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "Environment")

@@ -14,6 +14,7 @@ struct EnvironmentApp: App {
         WindowGroup {
             MonitorView()
         }
-        .windowToolbarStyle(.unified(showsTitle: false))
+        .windowToolbarStyle(.unified(showsTitle: true))
+		.windowStyle(.hiddenTitleBar)
     }
 }

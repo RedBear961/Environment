@@ -9,13 +9,13 @@ import SwiftUI
 
 public final class Monitor: ObservableObject {
     
-    @Published public var services: [Service]
+    @Published public var services: [Daemon]
     
     public init() {
         services = []
     }
     
-    public func start(_ service: Service) {
+    public func start(_ service: Daemon) {
         let index = services.firstIndex { $0.name == service.name }
         service.status = .loading
         services[index!] = service
@@ -25,7 +25,7 @@ public final class Monitor: ObservableObject {
         }
     }
     
-    public func stop(_ service: Service) {
+    public func stop(_ service: Daemon) {
         let index = services.firstIndex { $0.name == service.name }
         service.status = .disabling
         services[index!] = service
@@ -35,7 +35,7 @@ public final class Monitor: ObservableObject {
         }
     }
     
-    public func restart(_ service: Service) {
+    public func restart(_ service: Daemon) {
         let index = services.firstIndex { $0.name == service.name }
         service.status = .reloading
         services[index!] = service

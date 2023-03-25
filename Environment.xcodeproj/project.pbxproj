@@ -7,29 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C81EF93329CF075B006E7DD5 /* RoundedListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EF93229CF075B006E7DD5 /* RoundedListSection.swift */; };
+		C81EF93529CF11D1006E7DD5 /* DaemonEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EF93429CF11D1006E7DD5 /* DaemonEditor.swift */; };
+		C81EF93729CF1539006E7DD5 /* Image+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EF93629CF1539006E7DD5 /* Image+Data.swift */; };
+		C89689BC29BF576700DF5BD6 /* View+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89689BB29BF576700DF5BD6 /* View+Utils.swift */; };
+		C89689BE29BF57AF00DF5BD6 /* Color+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89689BD29BF57AF00DF5BD6 /* Color+Utils.swift */; };
+		C8E4066829BC7FEF00F5E0B5 /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E4066729BC7FEF00F5E0B5 /* DropView.swift */; };
+		C8E4066C29BC86E900F5E0B5 /* DaemonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E4066B29BC86E900F5E0B5 /* DaemonView.swift */; };
+		C8E4066E29BC9B9600F5E0B5 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E4066D29BC9B9600F5E0B5 /* Avatar.swift */; };
 		CE7DC77A29B8D80900847FE7 /* EnvironmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DC77929B8D80900847FE7 /* EnvironmentApp.swift */; };
 		CE7DC77E29B8D80A00847FE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7DC77D29B8D80A00847FE7 /* Assets.xcassets */; };
 		CE7DC78129B8D80A00847FE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7DC78029B8D80A00847FE7 /* Preview Assets.xcassets */; };
 		CE7DC78929B8DBD300847FE7 /* MonitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DC78829B8DBD300847FE7 /* MonitorView.swift */; };
-		CE7DC78B29B8EDB600847FE7 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DC78A29B8EDB600847FE7 /* Service.swift */; };
-		CE7DC78D29B8EEF600847FE7 /* ServiceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DC78C29B8EEF600847FE7 /* ServiceStorage.swift */; };
+		CE7DC78B29B8EDB600847FE7 /* Daemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DC78A29B8EDB600847FE7 /* Daemon.swift */; };
+		CE7DC78D29B8EEF600847FE7 /* DaemonStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DC78C29B8EEF600847FE7 /* DaemonStorage.swift */; };
 		CE7DC79029B8EF0A00847FE7 /* Environment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE7DC78E29B8EF0A00847FE7 /* Environment.xcdatamodeld */; };
 		CE7DC79229B8EFB300847FE7 /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DC79129B8EFB300847FE7 /* Monitor.swift */; };
-		CE7DC79429B8F98700847FE7 /* AddServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DC79329B8F98700847FE7 /* AddServiceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C81EF93229CF075B006E7DD5 /* RoundedListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedListSection.swift; sourceTree = "<group>"; };
+		C81EF93429CF11D1006E7DD5 /* DaemonEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaemonEditor.swift; sourceTree = "<group>"; };
+		C81EF93629CF1539006E7DD5 /* Image+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Data.swift"; sourceTree = "<group>"; };
+		C89689BB29BF576700DF5BD6 /* View+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Utils.swift"; sourceTree = "<group>"; };
+		C89689BD29BF57AF00DF5BD6 /* Color+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Utils.swift"; sourceTree = "<group>"; };
+		C8E4066729BC7FEF00F5E0B5 /* DropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropView.swift; sourceTree = "<group>"; };
+		C8E4066B29BC86E900F5E0B5 /* DaemonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaemonView.swift; sourceTree = "<group>"; };
+		C8E4066D29BC9B9600F5E0B5 /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 		CE7DC77629B8D80800847FE7 /* Environment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Environment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7DC77929B8D80900847FE7 /* EnvironmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentApp.swift; sourceTree = "<group>"; };
 		CE7DC77D29B8D80A00847FE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE7DC78029B8D80A00847FE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE7DC78229B8D80A00847FE7 /* Environment.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Environment.entitlements; sourceTree = "<group>"; };
 		CE7DC78829B8DBD300847FE7 /* MonitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorView.swift; sourceTree = "<group>"; };
-		CE7DC78A29B8EDB600847FE7 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		CE7DC78C29B8EEF600847FE7 /* ServiceStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceStorage.swift; sourceTree = "<group>"; };
+		CE7DC78A29B8EDB600847FE7 /* Daemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daemon.swift; sourceTree = "<group>"; };
+		CE7DC78C29B8EEF600847FE7 /* DaemonStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaemonStorage.swift; sourceTree = "<group>"; };
 		CE7DC78F29B8EF0A00847FE7 /* Environment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Environment.xcdatamodel; sourceTree = "<group>"; };
 		CE7DC79129B8EFB300847FE7 /* Monitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monitor.swift; sourceTree = "<group>"; };
-		CE7DC79329B8F98700847FE7 /* AddServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +57,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C89689BF29BF57C800DF5BD6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C89689C229BF57E200DF5BD6 /* Common */,
+				C89689C029BF57D100DF5BD6 /* Story */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C89689C029BF57D100DF5BD6 /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				C89689C129BF57D700DF5BD6 /* Monitor */,
+				C89689C329BF57EA00DF5BD6 /* Daemon */,
+			);
+			path = Story;
+			sourceTree = "<group>";
+		};
+		C89689C129BF57D700DF5BD6 /* Monitor */ = {
+			isa = PBXGroup;
+			children = (
+				CE7DC78829B8DBD300847FE7 /* MonitorView.swift */,
+				CE7DC79129B8EFB300847FE7 /* Monitor.swift */,
+			);
+			path = Monitor;
+			sourceTree = "<group>";
+		};
+		C89689C229BF57E200DF5BD6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C8E4066729BC7FEF00F5E0B5 /* DropView.swift */,
+				C8E4066D29BC9B9600F5E0B5 /* Avatar.swift */,
+				C81EF93229CF075B006E7DD5 /* RoundedListSection.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C89689C329BF57EA00DF5BD6 /* Daemon */ = {
+			isa = PBXGroup;
+			children = (
+				C8E4066B29BC86E900F5E0B5 /* DaemonView.swift */,
+				C81EF93429CF11D1006E7DD5 /* DaemonEditor.swift */,
+				CE7DC78A29B8EDB600847FE7 /* Daemon.swift */,
+			);
+			path = Daemon;
+			sourceTree = "<group>";
+		};
+		C89689C429BF57F400DF5BD6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C89689BB29BF576700DF5BD6 /* View+Utils.swift */,
+				C89689BD29BF57AF00DF5BD6 /* Color+Utils.swift */,
+				C81EF93629CF1539006E7DD5 /* Image+Data.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		CE7DC76D29B8D80800847FE7 = {
 			isa = PBXGroup;
 			children = (
@@ -63,11 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				CE7DC77929B8D80900847FE7 /* EnvironmentApp.swift */,
-				CE7DC78829B8DBD300847FE7 /* MonitorView.swift */,
-				CE7DC79129B8EFB300847FE7 /* Monitor.swift */,
-				CE7DC79329B8F98700847FE7 /* AddServiceView.swift */,
-				CE7DC78A29B8EDB600847FE7 /* Service.swift */,
-				CE7DC78C29B8EEF600847FE7 /* ServiceStorage.swift */,
+				C89689BF29BF57C800DF5BD6 /* UI */,
+				C89689C429BF57F400DF5BD6 /* Utils */,
+				CE7DC78C29B8EEF600847FE7 /* DaemonStorage.swift */,
 				CE7DC78E29B8EF0A00847FE7 /* Environment.xcdatamodeld */,
 				CE7DC77D29B8D80A00847FE7 /* Assets.xcassets */,
 				CE7DC78229B8D80A00847FE7 /* Environment.entitlements */,
@@ -155,12 +224,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE7DC78929B8DBD300847FE7 /* MonitorView.swift in Sources */,
-				CE7DC78D29B8EEF600847FE7 /* ServiceStorage.swift in Sources */,
-				CE7DC79429B8F98700847FE7 /* AddServiceView.swift in Sources */,
+				C81EF93329CF075B006E7DD5 /* RoundedListSection.swift in Sources */,
+				C8E4066829BC7FEF00F5E0B5 /* DropView.swift in Sources */,
+				CE7DC78D29B8EEF600847FE7 /* DaemonStorage.swift in Sources */,
+				C81EF93529CF11D1006E7DD5 /* DaemonEditor.swift in Sources */,
+				C81EF93729CF1539006E7DD5 /* Image+Data.swift in Sources */,
 				CE7DC79029B8EF0A00847FE7 /* Environment.xcdatamodeld in Sources */,
 				CE7DC77A29B8D80900847FE7 /* EnvironmentApp.swift in Sources */,
+				C8E4066C29BC86E900F5E0B5 /* DaemonView.swift in Sources */,
+				C89689BC29BF576700DF5BD6 /* View+Utils.swift in Sources */,
+				C89689BE29BF57AF00DF5BD6 /* Color+Utils.swift in Sources */,
 				CE7DC79229B8EFB300847FE7 /* Monitor.swift in Sources */,
-				CE7DC78B29B8EDB600847FE7 /* Service.swift in Sources */,
+				C8E4066E29BC9B9600F5E0B5 /* Avatar.swift in Sources */,
+				CE7DC78B29B8EDB600847FE7 /* Daemon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
