@@ -90,6 +90,12 @@ public struct DaemonView: View {
 				.font(.system(size: 15, weight: .semibold))
 
 			Spacer()
+
+			Button(action: {}) {
+				Text("Сохранить")
+			}
+			.buttonStyle(.bordered)
+			.tint(.blue)
 		}
     }
 

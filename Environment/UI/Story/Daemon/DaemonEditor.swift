@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import Quartz
 
 final class DaemonEditor: ObservableObject {
 
@@ -22,10 +23,22 @@ final class DaemonEditor: ObservableObject {
 	}
 
 	func onAvatarSelect() {
+		guard let imagePicker = IKPictureTaker.pictureTaker() else {
+			preconditionFailure()
+		}
 
+		let result = imagePicker.runModal()
+		guard NSApplication.ModalResponse(result) == .OK,
+			  let nsImage = imagePicker.outputImage() else {
+			return
+		}
+
+		daemon.image = nsImage.tiffRepresentation
+		avatar = Image(nsImage: nsImage)
 	}
 
 	func onAvatarDelete() {
-		self.avatar = nil
+		daemon.image = nil
+		avatar = nil
 	}
 }
