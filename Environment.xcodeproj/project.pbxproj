@@ -17,6 +17,12 @@
 		C81EF94129CF78AD006E7DD5 /* ToggleSettingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EF94029CF78AD006E7DD5 /* ToggleSettingRow.swift */; };
 		C81EF94329CF7932006E7DD5 /* tech_task.txt in Resources */ = {isa = PBXBuildFile; fileRef = C81EF94229CF7932006E7DD5 /* tech_task.txt */; };
 		C81EF94529CF799C006E7DD5 /* DaemonExecution.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EF94429CF799C006E7DD5 /* DaemonExecution.swift */; };
+		C81EF94829CF7B2E006E7DD5 /* DaemonView+Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EF94729CF7B2E006E7DD5 /* DaemonView+Main.swift */; };
+		C81EF94A29CF7B67006E7DD5 /* DaemonView+Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EF94929CF7B67006E7DD5 /* DaemonView+Launch.swift */; };
+		C81EF94C29CF84B1006E7DD5 /* DaemonView+Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EF94B29CF84B1006E7DD5 /* DaemonView+Stop.swift */; };
+		C81EF94E29CF8C69006E7DD5 /* Stepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EF94D29CF8C69006E7DD5 /* Stepper.swift */; };
+		C81EF95029CF90B2006E7DD5 /* StepperList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EF94F29CF90B2006E7DD5 /* StepperList.swift */; };
+		C81EF95229CF91E2006E7DD5 /* View+cornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EF95129CF91E2006E7DD5 /* View+cornerRadius.swift */; };
 		C89689BE29BF57AF00DF5BD6 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89689BD29BF57AF00DF5BD6 /* Color+Hex.swift */; };
 		C8E4066829BC7FEF00F5E0B5 /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E4066729BC7FEF00F5E0B5 /* DropView.swift */; };
 		C8E4066C29BC86E900F5E0B5 /* DaemonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E4066B29BC86E900F5E0B5 /* DaemonView.swift */; };
@@ -42,6 +48,12 @@
 		C81EF94029CF78AD006E7DD5 /* ToggleSettingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleSettingRow.swift; sourceTree = "<group>"; };
 		C81EF94229CF7932006E7DD5 /* tech_task.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = tech_task.txt; sourceTree = "<group>"; };
 		C81EF94429CF799C006E7DD5 /* DaemonExecution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaemonExecution.swift; sourceTree = "<group>"; };
+		C81EF94729CF7B2E006E7DD5 /* DaemonView+Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DaemonView+Main.swift"; sourceTree = "<group>"; };
+		C81EF94929CF7B67006E7DD5 /* DaemonView+Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DaemonView+Launch.swift"; sourceTree = "<group>"; };
+		C81EF94B29CF84B1006E7DD5 /* DaemonView+Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DaemonView+Stop.swift"; sourceTree = "<group>"; };
+		C81EF94D29CF8C69006E7DD5 /* Stepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stepper.swift; sourceTree = "<group>"; };
+		C81EF94F29CF90B2006E7DD5 /* StepperList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperList.swift; sourceTree = "<group>"; };
+		C81EF95129CF91E2006E7DD5 /* View+cornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+cornerRadius.swift"; sourceTree = "<group>"; };
 		C89689BD29BF57AF00DF5BD6 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		C8E4066729BC7FEF00F5E0B5 /* DropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropView.swift; sourceTree = "<group>"; };
 		C8E4066B29BC86E900F5E0B5 /* DaemonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaemonView.swift; sourceTree = "<group>"; };
@@ -69,6 +81,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C81EF94629CF7B1C006E7DD5 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				C81EF94729CF7B2E006E7DD5 /* DaemonView+Main.swift */,
+				C81EF94929CF7B67006E7DD5 /* DaemonView+Launch.swift */,
+				C81EF94B29CF84B1006E7DD5 /* DaemonView+Stop.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
 		C89689BF29BF57C800DF5BD6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +127,8 @@
 				C81EF93E29CF7875006E7DD5 /* TextFieldSettingRow.swift */,
 				C81EF94029CF78AD006E7DD5 /* ToggleSettingRow.swift */,
 				C81EF93C29CF76DD006E7DD5 /* ExecutionPicker.swift */,
+				C81EF94D29CF8C69006E7DD5 /* Stepper.swift */,
+				C81EF94F29CF90B2006E7DD5 /* StepperList.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -112,6 +136,7 @@
 		C89689C329BF57EA00DF5BD6 /* Daemon */ = {
 			isa = PBXGroup;
 			children = (
+				C81EF94629CF7B1C006E7DD5 /* Section */,
 				C8E4066B29BC86E900F5E0B5 /* DaemonView.swift */,
 				C81EF93429CF11D1006E7DD5 /* DaemonEditor.swift */,
 				CE7DC78A29B8EDB600847FE7 /* Daemon.swift */,
@@ -127,6 +152,7 @@
 				C81EF93629CF1539006E7DD5 /* Image+Data.swift */,
 				C81EF93829CF170A006E7DD5 /* View+hidden.swift */,
 				C81EF93A29CF1713006E7DD5 /* View+border.swift */,
+				C81EF95129CF91E2006E7DD5 /* View+cornerRadius.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -151,10 +177,10 @@
 			isa = PBXGroup;
 			children = (
 				CE7DC77929B8D80900847FE7 /* EnvironmentApp.swift */,
+				CE7DC78C29B8EEF600847FE7 /* DaemonStorage.swift */,
 				C81EF94229CF7932006E7DD5 /* tech_task.txt */,
 				C89689BF29BF57C800DF5BD6 /* UI */,
 				C89689C429BF57F400DF5BD6 /* Utils */,
-				CE7DC78C29B8EEF600847FE7 /* DaemonStorage.swift */,
 				CE7DC78E29B8EF0A00847FE7 /* Environment.xcdatamodeld */,
 				CE7DC77D29B8D80A00847FE7 /* Assets.xcassets */,
 				CE7DC78229B8D80A00847FE7 /* Environment.entitlements */,
@@ -249,17 +275,23 @@
 				C81EF93929CF170A006E7DD5 /* View+hidden.swift in Sources */,
 				CE7DC78D29B8EEF600847FE7 /* DaemonStorage.swift in Sources */,
 				C81EF93529CF11D1006E7DD5 /* DaemonEditor.swift in Sources */,
+				C81EF94A29CF7B67006E7DD5 /* DaemonView+Launch.swift in Sources */,
 				C81EF93F29CF7875006E7DD5 /* TextFieldSettingRow.swift in Sources */,
 				C81EF93729CF1539006E7DD5 /* Image+Data.swift in Sources */,
 				CE7DC79029B8EF0A00847FE7 /* Environment.xcdatamodeld in Sources */,
+				C81EF95029CF90B2006E7DD5 /* StepperList.swift in Sources */,
 				CE7DC77A29B8D80900847FE7 /* EnvironmentApp.swift in Sources */,
 				C8E4066C29BC86E900F5E0B5 /* DaemonView.swift in Sources */,
 				C81EF93B29CF1713006E7DD5 /* View+border.swift in Sources */,
 				C81EF94529CF799C006E7DD5 /* DaemonExecution.swift in Sources */,
+				C81EF94E29CF8C69006E7DD5 /* Stepper.swift in Sources */,
 				C89689BE29BF57AF00DF5BD6 /* Color+Hex.swift in Sources */,
+				C81EF94829CF7B2E006E7DD5 /* DaemonView+Main.swift in Sources */,
 				CE7DC79229B8EFB300847FE7 /* Monitor.swift in Sources */,
 				C8E4066E29BC9B9600F5E0B5 /* Avatar.swift in Sources */,
+				C81EF95229CF91E2006E7DD5 /* View+cornerRadius.swift in Sources */,
 				CE7DC78B29B8EDB600847FE7 /* Daemon.swift in Sources */,
+				C81EF94C29CF84B1006E7DD5 /* DaemonView+Stop.swift in Sources */,
 				C81EF94129CF78AD006E7DD5 /* ToggleSettingRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

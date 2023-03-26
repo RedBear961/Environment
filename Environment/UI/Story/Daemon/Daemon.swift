@@ -43,7 +43,7 @@ public final class Daemon: NSManagedObject {
     @NSManaged public var name: String
     @NSManaged public var image: Data?
 	@NSManaged public var detail: String
-	@NSManaged public var port: Int
+	@NSManaged public var port: String
 	@NSManaged public var process: String
 	@NSManaged public var launch: DaemonLaunch
 	@NSManaged public var stop: DaemonStop

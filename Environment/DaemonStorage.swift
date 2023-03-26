@@ -15,9 +15,15 @@ public final class DaemonStorage {
         let container = NSPersistentContainer(name: "Environment")
         container.loadPersistentStores { _, error in
             if let error {
-                preconditionFailure(error.localizedDescription)
+//                preconditionFailure(error.localizedDescription)
             }
         }
+
+//		let coordinator = container.persistentStoreCoordinator
+//		let store = coordinator.persistentStores[0]
+//		try! coordinator.remove(store)
+//		try! FileManager.default.removeItem(at: store.url!)
+
         return container
     }()
     

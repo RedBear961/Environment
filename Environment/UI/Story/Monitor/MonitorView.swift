@@ -75,7 +75,7 @@ public struct MonitorView: View {
 		Text("Мониторинг")
 			.font(.system(size: 15, weight: .semibold))
 
-		NavigationLink(destination: monitor.newDaemon) {
+		NavigationLink(destination: { monitor.newDaemon() }) {
 			Image(systemName: "plus")
 		}
 	}

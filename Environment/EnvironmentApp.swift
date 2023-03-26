@@ -9,6 +9,10 @@ import SwiftUI
 
 @main
 struct EnvironmentApp: App {
+
+	init() {
+		
+	}
     
     var body: some Scene {
         WindowGroup {
